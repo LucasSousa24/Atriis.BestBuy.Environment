@@ -44,7 +44,7 @@ if (builder.Environment.IsDevelopment())
         });
 
         c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "BestBuy.Abstractions.xml"));
-        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "BestBuy.API.xml"));
+        c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Atriis.BestBuy.API.xml"));
     });
 }
 

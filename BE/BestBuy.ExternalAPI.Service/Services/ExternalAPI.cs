@@ -1,5 +1,7 @@
-﻿using BestBuy.Abstractions.Interfaces;
+﻿
+using BestBuy.Abstractions.Interfaces;
 using BestBuy.Abstractions.Models;
+using System.Net.Http;
 using System.Text.Json;
 
 namespace BestBuy.ExternalAPI.Services
