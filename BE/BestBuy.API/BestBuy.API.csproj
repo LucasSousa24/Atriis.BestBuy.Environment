@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3d7caf2f-ecee-4640-a336-0db3d8d05e66</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+	<PropertyGroup>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+    <ProjectReference Include="..\BestBuy.Abstractions\BestBuy.Abstractions.csproj" />
+    <ProjectReference Include="..\BestBuy.Core\BestBuy.Core.csproj" />
+    <ProjectReference Include="..\BestBuy.EFCore\BestBuy.EFCore.csproj" />
+    <ProjectReference Include="..\BestBuy.ExternalAPI\BestBuy.ExternalAPI.csproj" />
+  </ItemGroup>
+
+</Project>

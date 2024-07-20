@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.bannerarea {
+    background-color: #5a5a5a;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+.intro-text {
+    margin-top: 50px;
+}
+
+.intro-text p {
+    margin-bottom: 20px;
+}
+
+.rounded-img {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cision-logo {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+}
+
+.rounded-img:hover {
+    transform: scale(1.1);
+}
+
+.card-img-top {
+    width:  90px;
+    height: 130px;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    top: 40%;
+    left: 0px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
