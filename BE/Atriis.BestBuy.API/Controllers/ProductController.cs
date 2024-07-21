@@ -30,7 +30,7 @@ namespace BestBuy.API.Controllers
         /// </summary>
         /// <param name="filters"></param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost(Routes.GetAllFilteredProducts)]
         [ProducesResponseType(typeof(Abstractions.Models.FilteredProducts), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> GetAllFilteredProducts([FromBody] Abstractions.Models.TableFilters filters)

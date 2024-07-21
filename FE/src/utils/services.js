@@ -1,5 +1,6 @@
 import {
-    IMAGE_URL
+  PRODUCT_URL,
+  USER_URL
 } from "../constants/URIs";
 
 const HTTP_METHOD = {
@@ -16,12 +17,31 @@ const defaultHeader = {
 
 const generatePayload = (payload) => {
   const {
-    filteredBrand,
-    pageAt
+    pageAt,
+    nameFilter,
+    productCategoryFilter
   } = payload ?? {};
   return {
-    filteredBrand: filteredBrand ===  "" ? null : filteredBrand,
-    pageAt: pageAt
+    pageAt: Number(pageAt),
+    nameFilter: nameFilter,
+    productCategoryFilter: productCategoryFilter
+  };
+};
+
+const generateUserPayload = (payload) => {
+  const {
+    nameFilter,
+    productCategoryFilter
+  } = payload ?? {};
+  return {
+    id: 1,
+    username: "user1",
+    password: "password1",
+    isDeleted: false,
+    createdOn: new Date(),
+    updatedOn: new Date(),
+    nameFilter: nameFilter,
+    productCategoryFilter: productCategoryFilter
   };
 };
 
@@ -42,12 +62,28 @@ const request = async (path, options) => {
     throw errorResponse;
 };
 
-export const fetchImagesForTable = async (payload) => {
+export const fetchProductsForTable = async (payload) => {
     return await request(
-      `${IMAGE_URL}/getfilteredimages`,
+      `${PRODUCT_URL}/getallfilteredproducts`,
       {
         method: HTTP_METHOD.POST,
         body: generatePayload(payload),
       }
     );
+};
+
+export const updateFiltersForUser = async (payload) => {
+  return await request(
+    `${USER_URL}`,
+    {
+      method: HTTP_METHOD.PUT,
+      body: generateUserPayload(payload),
+    }
+  );
+};
+
+export const fetchUserByCredentials = async () => {
+  return await request(`${USER_URL}?username=user1&password=password1`, {
+    method: HTTP_METHOD.GET
+  });
 };

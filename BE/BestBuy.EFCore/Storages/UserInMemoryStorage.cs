@@ -17,20 +17,8 @@ namespace BestBuy.EFCore.Storages
                 UpdatedOn = DateTime.UtcNow,
                 IsDeleted = false,
                 Username = "user1",
-                Password = "password1",
-                NameFilter = new Filter { AllPreviousSearched = new List<string> { "search1", "search2" } },
-                ProductCategoryFilter = new Filter { AllPreviousSearched = new List<string> { "category1", "category2" } }
-            }, new User
-            {
-                Id = 2,
-                CreatedOn = DateTime.UtcNow,
-                UpdatedOn = DateTime.UtcNow,
-                IsDeleted = false,
-                Username = "user2",
-                Password = "password2",
-                NameFilter = new Filter { AllPreviousSearched = new List<string> { "search3", "search4" } },
-                ProductCategoryFilter = new Filter { AllPreviousSearched = new List<string> { "category3", "category4" } }
-            } 
+                Password = "password1"
+            }
         };
 
         /// <inheritdoc />

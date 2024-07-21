@@ -16,7 +16,7 @@
         /// <summary>
         /// Url Static Values
         /// </summary>
-        public static string UrlStaticValues = "show=sku,name,salePrice,thumbnailImage&pageSize=10&page=";
+        public static string UrlStaticValues = "show=sku,name,salePrice,thumbnailImage&pageSize=12&page=";
         /// <summary>
         /// Api Key
         /// </summary>

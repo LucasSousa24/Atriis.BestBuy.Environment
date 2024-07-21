@@ -1,18 +1,18 @@
 import Card from './Card';
 import CardPagination from './CardPagination';
 
-const CardSlider = ({Brands, pageAt, alterPage, printableBtns, maxNumberOfPages}) => {
+const CardSlider = ({Products, pageAt, alterPage, printableBtns, maxNumberOfPages}) => {
     return (
         <div className="container-fluid mt-5">
             <div className={`row row-cols-6`}>
                 {
-                    Brands.length > 0 &&
-                    Brands.map((brand, index) => {
+                    Products.length > 0 &&
+                    Products.map((product, index) => {
                         return (
                             <div className="col-lg-2 d-flex align-items-stretch">
                                 <Card 
                                     key={index}
-                                    brand={brand}
+                                    product={product}
                                 />
                             </div>
                         );

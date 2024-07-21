@@ -3,7 +3,7 @@
     /// <summary>
     /// Filter
     /// </summary>
-    public class Filter : BaseModel
+    public class Filter
     {
         /// <summary>
         /// Is Ascending Order

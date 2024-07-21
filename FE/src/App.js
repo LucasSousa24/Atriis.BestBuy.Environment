@@ -1,6 +1,6 @@
 import './styles/Global.css';
 import Home from './routes/Home';
-import Brands from './routes/Brands';
+import Products from './routes/Products';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -13,7 +13,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/brands' element={<Brands/>}/>
+        <Route path='/products' element={<Products/>}/>
       </Routes>
     </QueryClientProvider>
   );

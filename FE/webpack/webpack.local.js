@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     new ReactRefreshWebpackPlugin(),
     new EnvironmentPlugin({
-      API: "https://localhost:7299",
+      API: "http://localhost:7192",
     }),
   ],
 }
